@@ -24,7 +24,14 @@
     i {
         color: #222;
     }
+    transition: all 0.4s;
 }
+.tab.selected .tab-tile {
+    transform: translateY(-20px);
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0, 0, 0 , 2);
+}
+// STYLE FOR THE TAB TILE BACKGROUND SHAPE
 
 .tab-tile::before {
     content: '';
@@ -60,3 +67,11 @@
     opacity: 1;
     transform: scale(1.1);
 }
+
+.tab.selected .tab-tile::before {
+    opacity: 1;
+    border-radius: 50%;
+    transform: scale(1.1);
+}
+
+// END STYLE FOR THE TAB TILE BACKGROUND SHAPE
