@@ -9,34 +9,36 @@
 }
 
 .top-section {
-   
+    flex: 1;
     text-align: center;
     padding: 100px 0;
 
     h1 {
-        font-size: 120px;
+        font-size: 100px;
         font-weight: bold;
         color: #f5f5f5;
-        text-shadow: Opx 1px 7px rgba(black, 0.12);
+        text-shadow: 0px 1px 7px rgba(black, 0.12);
     }
 
     h2 {
         font-size: 28px;
         color: white;
-        text-shadow: Opx 1px 4px rgba(black, 0.1);
+        text-shadow: 0px 1px 4px rgba(black, 0.1);
     }
 }
 
 .content-section {
-   
+    flex: 3;
     flex-grow: 1;
+    min-height: 0px;
 }
 
 .bottom-section {
-
+    flex: 1;
     display: flex;
 
     app-tabs {
         margin: auto;
     }
 }
+
