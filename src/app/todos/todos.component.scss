@@ -1,0 +1,59 @@
+.todos-wrapper{
+    height: 100%;
+    overflow-y: auto;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba($color: black, $alpha: 0.5);
+    border-radius: 25px;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+}
+
+.todo-text {
+    color: rgba($color: white, $alpha: 0.8);
+}
+
+.checkbox {
+    display: flex;
+    padding: 4px;
+    border: 2px solid rgba($color: white, $alpha: 0.35);
+    border-radius: 50%;
+    margin-right: 15px;
+    
+    i {
+        font-size: 18px;
+        opacity: 0;
+    }
+}
+
+
+.todo-item:hover {
+    .todo-text {
+        color: rgba($color: white, $alpha: 0.95);
+    }
+    .checkbox {
+        border-color: transparent;
+        background-color: rgba($color: white, $alpha: 0.35);
+    }
+}
+
+.todo-item.completed {
+    .todo-text {
+        color: rgba($color: white, $alpha: 0.78);
+    }
+    .checkbox {
+        border-color: transparent;
+        background-color: rgb(9, 218, 89);
+    }
+
+    i{
+        opacity: 1;
+    }
+}
+
+.todo-text, .checkbox {
+    transition: 0.12s;
+}
