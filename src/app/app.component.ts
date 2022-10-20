@@ -15,7 +15,7 @@ import { RouterOutlet } from '@angular/router';
           animate(1000, style({
             background: 'violet'
           })),
-          animate(1000)
+          animate(1000,)
         ])
      ])
   ]
