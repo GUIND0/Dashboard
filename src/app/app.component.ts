@@ -9,19 +9,45 @@ import { RouterOutlet } from '@angular/router';
   animations: [
      trigger('routeAnim', [
         transition('* => *',[
+
+          query(':enter, :leave',[
+            style({
+               position: 'absolute',
+               top: 0,
+               left: 0,
+               width: '100%'
+            }),
+         ], { optional: true }),
+
+          
           query(':enter',[
             style({
-              background: 'wheat'
+               opacity: 0,
+               display: 'block',
+               height: '100%'
             }),
-          ],{optional: true}),
+            
+         ], { optional: true }),
 
-          style({
-            background: 'blue'
-          }),
-          animate(1000, style({
-            background: 'violet'
-          })),
-          animate(1000,)
+          query(':leave', [
+              style({
+                display: 'block'
+              }),
+              animate(1000, style({
+                opacity: 0
+              }))
+          ], { optional: true }),
+
+          query(':enter',[
+             style({
+                opacity: 0,
+                display: 'block',
+                height: '100%'
+             }),
+             animate(1000, style({
+              opacity: 1
+             }))
+          ], { optional: true })
         ])
      ])
   ]
